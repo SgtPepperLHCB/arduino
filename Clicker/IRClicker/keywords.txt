@@ -1,0 +1,18 @@
+# Syntax colouring map for IRClicker
+
+# Classes (KEYWORD1)
+IRDevice        KEYWORD1
+IRDeviceCommand KEYWORD1
+IRDeviceProfile KEYWORD1
+IRReceiver      KEYWORD1
+IRTransmitter   KEYWORD1
+
+# Methods/functions (KEYWORD2)
+enableIROut     KEYWORD2
+mark            KEYWORD2
+send            KEYWORD2
+sendCode        KEYWORD2
+space           KEYWORD2
+
+# Constants (LITERAL1)
+
