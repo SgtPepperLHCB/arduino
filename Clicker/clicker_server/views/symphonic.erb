@@ -1,0 +1,21 @@
+<h3>Symphonic TV/VCR Clicker</h3>
+<form action="/symphonic" method="post">
+  <table border="1">
+    <% 8.times { |row| %>
+      <tr>
+        <% 4.times { |col| %>
+          <td>
+            <%=
+              i = row * 4 + col
+              if ( (i < @buttons.size) && (@buttons[i].size > 0) ) 
+                "<input type='submit' value='#{@buttons[i]}' name='#{i}'/>"
+              else
+                "&nbsp;"
+              end
+            %>
+          </td>
+        <% } %>
+      </tr>
+    <% } %>
+  </table>
+</form>
