@@ -11,13 +11,15 @@ class SerialGatewayService
   end
   
   def initialize
-    puts "***sgs init"
+    @port_dev  = '/dev/ttyUSB0'
+    @baud_rate = 115200
+    puts "SerialGatewayService.initialize #{@port_dev} @ #{@baud_rate}"
     begin
       #@sp = SerialPort.new( port_dev, baud_rate, data_bits, stop_bits, parity )
-      @sp = SerialPort.new( '/dev/ttyUSB0', 115200 )
+      @sp = SerialPort.new( @port_dev, @baud_rate ) #'/dev/ttyUSB0', 115200 )
       #at_exit { do_at_exit() }
     rescue => e
-      puts "Cannot initialise serial communication on #{port_dev} @ #{baud_rate}"
+      puts "Cannot initialise serial communication on #{@port_dev} @ #{@baud_rate}"
     end
     @mux = Mutex.new
   end
