@@ -2,8 +2,6 @@
 #define __SYMPHONICTVVCR_H__
 
 // Symphonic TV/VCR model=SC313E
-////                                        khz b   h_mk  h_sp  z_m  z_s  1_m  1_s   f_m  f_s
-//IRDeviceProfile SymphonicTvVcrProfile = { 38, 24, 3400, 3400, 880, 820, 880, 2500, 880, 0 } ;
 //                                       khz  bt  h_mk  h_sp  b_m  z_s  1_s   f_s
 IRDeviceProfile SymphonicTvVcrProfile = { 38, 24, 3400, 3400, 880, 820, 2500, 0 } ;
 IRDeviceCommand SymphonicTvVcrCommandCodes [] = {
@@ -40,54 +38,5 @@ IRDeviceCommand SymphonicTvVcrCommandCodes [] = {
   0x96B694, // game
   0x15CEA3, // time search
 } ;
-
-enum SymphonicTvVcrCommands {
-  SYMPH_POWER,
-  SYMPH_WAKE_UP_SLEEP,
-  SYMPH_EJECT,
-
-  SYMPH_1,
-  SYMPH_2,
-  SYMPH_3,
-  SYMPH_CHANNEL_RETURN,
-
-  SYMPH_4,
-  SYMPH_5,
-  SYMPH_6,
-  SYMPH_CHANNEL_UP,
-
-  SYMPH_7,
-  SYMPH_8,
-  SYMPH_9,
-  SYMPH_CHANNEL_DN,
-
-  SYMPH_0,
-  SYMPH_100,
-  SYMPH_VOLUME_UP,
-
-  SYMPH_MENU,
-  SYMPH_DISPLAY,
-  SYMPH_MUTE,
-  SYMPH_VOLUME_DN,
-
-  SYMPH_VCR_REWIND,
-  SYMPH_VCR_PLAY,
-  SYMPH_VCR_FAST_FWD,
-  SYMPH_VCR_STOP,
-
-  SYMPH_VCR_RECORD,
-  SYMPH_VCR_SPEED,
-  SYMPH_VCR_PAUSE,
-
-  SYMPH_CLEAR_RESET,
-  SYMPH_GAME,
-  SYMPH_VCR_TIME_SEARCH,
-
-  SYMPH_UP = SYMPH_VCR_PLAY,
-  SYMPH_DN = SYMPH_VCR_STOP,
-  SYMPH_LF = SYMPH_VCR_REWIND,
-  SYMPH_RT = SYMPH_VCR_FAST_FWD,
-} ;
-unsigned long Symph_Power = 0x141ebe ;
 
 #endif
