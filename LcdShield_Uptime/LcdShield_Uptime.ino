@@ -3,20 +3,26 @@
 #include <Adafruit_RGBLCDShield.h>
 #include <Time.h>
 
-Adafruit_RGBLCDShield lcd = Adafruit_RGBLCDShield() ;
-
-//LCD Display buffers
+//
+// Lcd
+//
 enum {
   LCD_COLS = 16,
   LCD_ROWS = 2,
   LCD_WHITE = 0x07
 } ;
+Adafruit_RGBLCDShield lcd = Adafruit_RGBLCDShield() ;
 time_t t0 ;
 int s0 ;
+int epoch0 ;
 uint8_t c ;
 char databuff[ 32 ] ;
 char dispbuff[ LCD_COLS + 1 ] ;
 
+
+//
+// setup
+//
 void setup() {
   Serial.begin( 9600 ) ;
   Serial.println( "ok" ) ;
@@ -26,10 +32,16 @@ void setup() {
   lcd.print( "hello, world" ) ;
   t0 = 0 ;
   s0 = 0 ;
+  epoch0 = 0 ;
 } //-setup
 
+
+//
+// main loop
+//
 void loop() {
   if ( now() > s0 ) {
+    // Only update if seconds change.
     s0 = now() ;
     memset( databuff, 0, 32 ) ;
     sprintf( databuff, "0x%02x ", c ) ;
@@ -42,6 +54,7 @@ void loop() {
     lcd.setCursor(0, 0) ;
     lcd.print( dispbuff ) ;
    
+    // display uptime
     time_t dt = now() - t0 ;
     sprintf( databuff, "up %3dd%02dh%02dm%02ds", day(dt)-1, hour(dt), minute(dt), second(dt) ) ;
     sprintf( dispbuff, "%-16s", databuff ) ;
