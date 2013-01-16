@@ -40,8 +40,7 @@ Adafruit_RGBLCDShield lcd = Adafruit_RGBLCDShield() ;
 int s0 ;
 unsigned long g_epoch ;
 bool g_epoch_sync ;
-uint8_t c ;
-char databuff[ LCD_COLS * 2 ] ;
+char databuff[ LCD_COLS * 4 ] ;
 char dispbuff[ LCD_COLS + 1 ] ;
 
 
@@ -67,6 +66,7 @@ void setup() {
   udp.begin(localPort);
   g_epoch = ntpTime() ;
   g_epoch_sync = true ;
+  dbg() ;
 } //-setup
 
 
@@ -83,6 +83,7 @@ void loop() {
       g_epoch = ntpTime() ;
     }
     displayDigitalClock( g_epoch, g_epoch_sync ) ;
+    dbg() ;
   }
 
   uint8_t buttons = lcd.readButtons();
@@ -168,4 +169,9 @@ unsigned long sendNTPpacket(IPAddress& address) {
   udp.beginPacket(address, 123); //NTP requests are to port 123
   udp.write(packetBuffer,NTP_PACKET_SIZE);
   udp.endPacket(); 
+}
+
+void dbg ( ) {
+  sprintf( databuff, "e=%d, s=%d", g_epoch, s0 ) ;
+  Serial.println( databuff ) ;
 }
