@@ -1,0 +1,378 @@
+<HTML>
+
+<HEAD>
+
+
+
+<TITLE>Haze-SPAN: TERC VHS-1 Calibrating Data</TITLE>
+
+
+
+
+
+</HEAD>
+
+<BODY BACKGROUND="images/spiralside.gif">
+
+<! The Haze-SPAN web site>
+
+
+
+<TABLE BORDER="0" CELLPADDING="5" CELLSPACING="5" WIDTH="500">
+
+
+
+<TR>
+
+
+
+	<TD VALIGN=TOP ALIGN=LEFT COLSPAN=2 NOWRAP>
+
+
+
+<MENU>	<IMG SRC="images/hazetop.gif" ALT="Haze-SPAN: Haze Sun Photometer Atmospheric Network" WIDTH="498" HEIGHT="87" BORDER="0"><BR>
+
+
+
+<A HREF="about.html"><IMG SRC="images/banaboutplain.gif" ALT="[About]" 
+WIDTH="46" HEIGHT="28" BORDER="0"></A><A HREF="news.html"><IMG 
+SRC="images/bannewsplain.gif" ALT="[News&Numbers]" WIDTH="106" HEIGHT="28" 
+BORDER="0"></A><A HREF="101.html"><IMG SRC="images/ban101.gif" ALT="[Haze 
+101]" WIDTH="57" HEIGHT="28" BORDER="0"></A><!--<A HREF="chat.html"><IMG 
+SRC="images/banchatplain.gif" ALT="[Haze Chat]" WIDTH="67" HEIGHT="28" BORDER="0"></A>--><A HREF="data.html"><IMG SRC="images/bandataplain.gif" ALT="[Data Collection]" WIDTH="110" HEIGHT="28" BORDER="0"></A><A HREF="corner.html"><IMG SRC="images/bancornerplain.gif" ALT="[Forrest's Corner]" WIDTH="114" HEIGHT="28" BORDER="0"></A><P>
+
+<FONT SIZE="2">[ <B>TERC VHS-1 Sun Photometer </B> ]</FONT><FONT SIZE="2"> [ <A HREF="101.html#manual">Manual TOC</A> ]</FONT></MENU></TD></TR>
+
+
+
+<TR><TD><MENU>
+
+<H2>Analyzing Your Calibration data</H2>
+
+
+
+<P>
+
+     You will use the data from your Langley test to find what's
+
+called the extraterrestrial constant, the signal the TERC VHS-1
+
+would give at the top of the atmosphere (<A HREF="ref.html#4">4</A>). In other words, if
+
+you took the TERC VHS-1 along on a trip into Earth orbit in the
+
+Space Shuttle, the signal you would measure using the TERC VHS-1
+
+during a space walk should be very close to what you measure on
+
+the ground using the Langley method. 
+
+</P>
+
+<P>
+
+     There are several ways to analyze your data to find the
+
+extraterrestrial or ET constant, all of which should yield the
+
+same result. After you find your instrument's ET constant, you
+
+will insert it in a formula that will give you a standardized
+
+measurement of haze known as aerosol optical thickness (AOT).  
+
+</P>
+
+<P>
+
+     When you made your Langley measurements for a range of Sun
+
+angles, each time the angle changed the thickness of the
+
+atmosphere (the air mass) between you and the Sun changed (see
+
+<A HREF="spbuildfig6.html">Fig. 6</A>.). When the Sun is straight overhead, its light passes
+
+through one thickness of atmosphere or one air mass. The air mass
+
+(m) increases as the Sun moves closer to the horizon. The m for
+
+each of your measurements is 1 divided by the sine of the Sun's
+
+angle (<) above the horizon or m = 1/sun<.
+
+</P>
+
+<P>
+
+     If you make a graph of the natural logarithm (ln) of the
+
+signal you measured versus m when you made the measurement, the
+
+data points should fall along a straight line out to an m of 10
+
+or so, assuming the sky conditions were stable during your
+
+measurement period. If you extend the straight line, the ET
+
+constant will be where the line crosses the air mass axis at m =
+
+0. When m = 0, there is no air mass, which means this is the
+
+signal the TERC VHS-1 will give if you could take it to the top
+
+of the atmosphere.
+
+</P>
+
+<P>
+
+     Several methods are available for extracting the ET constant
+
+from your Langley test data. They should all give similar or
+
+nearly identical results. All three methods perform what is
+
+called a linear regression on your data. Briefly, a linear
+
+regression fits the equation for a straight line, in this case,
+
+ln of signal = a + (b x air mass), to your data. You then use
+
+this equation to find the signal for m = 0.
+
+</P>
+
+<P>
+
+     The first two methods require that you determine the air
+
+mass for each measurement. The TERC VHS-1 spreadsheet does this
+
+automatically, and can be downloaded from: <A HREF="ftp://ftp.concord.org/pub/haze/vhs1-download/">ftp://ftp.concord.org/pub/haze/vhs1-download/</A> The methods given in the <A HREF="appendix.html">Appendix</A> require that you
+
+use a calculator to convert the Sun angles to the respective air
+
+masses. The air mass is the reciprocal of the Sun's angle above
+
+the horizon, so enter the angle and press the SIN key. Then press
+
+the 1/x key to get the air mass.
+
+</P>
+
+
+
+
+
+<H3>A. Graph Paper Method</H3>
+
+
+
+
+
+<OL TYPE="1" START="1">
+
+<LI>Make a table of the TERC VHS-1 measurements for a range of air
+
+masses up to about 10. The first column should be the air mass
+
+(m) for each measurement and the second column the Sun signal -
+
+the dark signal.
+
+
+
+<LI>Add a third column to your table for the natural logarithm
+
+(ln) of the signal. (Use a scientific calculator with a ln key.) 
+
+
+
+<LI>Print this title on the abscissa (x or horizontal axis) of the
+
+graph: Air mass (m). 
+
+
+
+<LI>Print this title on the ordinate (y or vertical axis) of the
+
+graph: ln of signal.
+
+
+
+<LI>Label the major divisions of the abscissa 0 to 10, as shown in
+
+<A HREF="spbuildfig7.html">Fig. 7</A>. 
+
+
+
+<LI>Plot the pairs of data in the first and third columns on your
+
+table on the graph. 
+
+
+
+<LI>Use a straight edge to draw a line through the center of the
+
+points. Extend the line to the ordinate as shown in <A HREF="spbuildfig7.html">Fig. 7</A>.
+
+
+
+<LI>The ET constant is where the line crosses the ordinate. Find
+
+the value at this point and write it on your graph as you will
+
+need it for the haze formula. The ET value derived from the hand
+
+drawn graph in <A HREF="spbuildfig7.html">Fig. 7</A> is based on the first Langley test made
+
+with a prototype TERC VHS-1. The ET constant is 1.292, which is
+
+very close to the values given by the calculator and a computer
+
+program.</OL>
+
+
+
+
+
+<H3>B. Scientific Calculator Method</H3>
+
+<OL TYPE="1" START="1">
+
+<LI>Make a table of the TERC VHS-1 measurements for a range of air
+
+masses up to about 10. The first column should be the air mass
+
+(m) for each measurement and the second column the Sun signal -
+
+the dark signal.
+
+
+
+<LI>Add a third column to your table for the natural logarithm
+
+(ln) of the signal. (Use a scientific calculator with a ln key.) 
+
+
+
+<LI>Enter the data pairs into a scientific calculator capable of
+
+performing a linear regression.
+
+
+
+<LI>Insert the coefficients given by the calculator to calculate
+
+the ln of the signal when m = 0. This number is the ET constant,
+
+so write it on your table. The ET constant for the prototype TERC
+
+VHS-1 is 1.2946.</OL>
+
+
+
+
+
+<H3>C. Computer Spreadsheet Method </H3>
+
+
+
+<P>
+
+     The TERC VHS-1 spreadsheet program (<A HREF="ref.html#5">5</A>) automatically
+
+determines the air mass for each data point. You can then use a
+
+scientific calculator, the spreadsheet's regression function or
+
+curve-fitting software to find the formula for the best fit
+
+through the points. The TERC VHS-1 spreadsheet can be downloaded from: <A HREF="ftp://ftp.concord.org/pub/haze/vhs1-download/">ftp://ftp.concord.org/pub/haze/vhs1-download/</A>
+
+</P>
+
+<P>
+
+     <A HREF="spbuildfig8.html">Fig. 8</A> shows a computer-generated graph of the all the data
+
+from the first Langley test of a TERC VHS-1. Notice how the data
+
+begin to curve when the air mass exceeds about 10? This
+
+established that the upper air mass limit for this instrument is
+
+m = 10. <A HREF="spbuildfig9.html">Fig. 9</A> shows a second computer-generated graph for only
+
+the data up to m = 10. Notice how the points appear to form a
+
+straight line?
+
+</P>
+
+<P>
+
+     <A HREF="spbuildfig10.html">Figure 10</A> shows that the points in <A HREF="spbuildfig9.html">Fig. 9</A> form a very
+
+straight line indeed. This graph was made with a powerful curve-fitting program called TableCurve (Jandel Scientific). In only
+
+seconds, this program fitted the data to hundreds of mathematical
+
+functions. It then drew the graph in <A HREF="spbuildfig10.html">Fig. 10</A> for the straight
+
+line formula (y = a + bx). The program also gave the coefficients
+
+for the formula and the value of the Sun signal for m = 0 (the ET
+
+constant). The ET constant for the prototype TERC VHS-1 is
+
+1.2946, the same number provided a little more slowly by a
+
+standard scientific calculator using the same data.    
+
+</P></TD></TR></TABLE>
+
+
+
+<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="3" WIDTH="500">
+
+<TR>
+
+	<TD VALIGN=TOP COLSPAN=2 ALIGN=LEFT NOWRAP>
+
+<MENU>
+
+<FONT SIZE="2">[ <B>TERC VHS-1 Sun Photometer </B> ]</FONT><FONT SIZE="2"> [ <A HREF="101.html#manual">Manual TOC</A> ]</FONT><P>
+
+<A HREF="about.html"><IMG SRC="images/banaboutplain.gif" ALT="[About]" 
+WIDTH="46" HEIGHT="28" BORDER="0"></A><A HREF="news.html"><IMG 
+SRC="images/bannewsplain.gif" ALT="[News&Numbers]" WIDTH="106" HEIGHT="28" 
+BORDER="0"></A><A HREF="101.html"><IMG SRC="images/ban101.gif" ALT="[Haze 
+101]" WIDTH="57" HEIGHT="28" BORDER="0"></A><!--<A HREF="chat.html"><IMG 
+SRC="images/banchatplain.gif" ALT="[Haze Chat]" WIDTH="67" HEIGHT="28" BORDER="0"></A>--><A HREF="data.html"><IMG SRC="images/bandataplain.gif" ALT="[Data Collection]" WIDTH="110" HEIGHT="28" BORDER="0"></A><A HREF="corner.html"><IMG SRC="images/bancornerplain.gif" ALT="[Forrest's Corner]" WIDTH="114" HEIGHT="28" BORDER="0"></A></TD></TR>
+
+<TR>
+
+	<TD WIDTH=85><MENU><IMG SRC="images/sunsmall.gif" ALT="sun small" WIDTH="85" HEIGHT="47" BORDER="0"></MENU></TD>
+
+
+
+	<TD WIDTH=415 NOWRAP><MENU><FONT SIZE="2"><B>Haze-SPAN</B>, A project of the <A HREF="../index.html"><B>Concord Consortium</B></A><BR>
+
+Copyright &COPY; 1997. All rights reserved.<BR> 
+
+Last updated: 21-Apr 1997: http://www.concord.org/haze/analyze.html<BR>
+
+Questions about Haze-SPAN: <A HREF="mailto:carolyn@concord.org">carolyn@concord.org</A> | about this site: <A HREF="mailto:webmaster@concord.org">webmaster@concord.org</A></FONT></MENU></TD>
+
+</TR>
+
+</TABLE>
+
+
+
+</BODY>
+
+</HTML>
+

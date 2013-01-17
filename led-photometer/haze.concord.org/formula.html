@@ -1,0 +1,252 @@
+<HTML>
+
+<HEAD>
+
+
+
+<TITLE>Haze-SPAN: 101- The Haze Formula</TITLE>
+
+
+
+
+
+</HEAD>
+
+<BODY BACKGROUND="images/spiralside.gif">
+
+<! The Haze-SPAN web site>
+
+
+
+<TABLE BORDER="0" CELLPADDING="5" CELLSPACING="5" WIDTH="500">
+
+
+
+<TR>
+
+
+
+	<TD VALIGN=TOP ALIGN=LEFT COLSPAN=2 NOWRAP>
+
+
+
+<MENU>	<IMG SRC="images/hazetop.gif" ALT="Haze-SPAN: Haze Sun Photometer Atmospheric Network" WIDTH="498" HEIGHT="87" BORDER="0"><BR>
+
+
+
+<A HREF="about.html"><IMG SRC="images/banaboutplain.gif" ALT="[About]" 
+WIDTH="46" HEIGHT="28" BORDER="0"></A><A HREF="news.html"><IMG 
+SRC="images/bannewsplain.gif" ALT="[News&Numbers]" WIDTH="106" HEIGHT="28" 
+BORDER="0"></A><A HREF="101.html"><IMG SRC="images/ban101.gif" ALT="[Haze 
+101]" WIDTH="57" HEIGHT="28" BORDER="0"></A><!--<A HREF="chat.html"><IMG 
+SRC="images/banchatplain.gif" ALT="[Haze Chat]" WIDTH="67" HEIGHT="28" BORDER="0"></A>--><A HREF="data.html"><IMG SRC="images/bandataplain.gif" ALT="[Data Collection]" WIDTH="110" HEIGHT="28" BORDER="0"></A><A HREF="corner.html"><IMG SRC="images/bancornerplain.gif" ALT="[Forrest's Corner]" WIDTH="114" HEIGHT="28" BORDER="0"></A><P>
+
+<FONT SIZE="2">[ <B>TERC VHS-1 Sun Photometer </B> ]</FONT><FONT SIZE="2"> [ <A HREF="101.html#manual">Manual TOC</A> ]</FONT></MENU></TD></TR>
+
+<TR><TD><MENU>
+
+<H3>The Haze Formula</H3>
+
+
+
+<P>
+
+     Every TERC VHS-1 has its own distinctive ET constant. This
+
+calibration number permits you to determine what scientists call
+
+the Aerosol Optical Thickness (AOT) of the atmosphere. AOT
+
+provides an excellent haze index. Even though the ET constant of
+
+different instruments may vary, all instruments should give very
+
+similar AOTs. The AOT formula is incorporated into the TERC VHS-1
+
+spreadsheet which can be downloaded from: <A HREF="ftp://ftp.concord.org/pub/haze/vhs1-download/">ftp://ftp.concord.org/pub/haze/vhs1-download/</A>The formula for AOT is:
+
+</P>
+
+
+
+
+
+<P>
+
+     AOT = (ln ET - ln signal-(0.117 x m) x (p/1013.25))/m              
+
+</P>
+
+where,<BR>
+
+ln ET is the ln of the extraterrestrial constant for the TERC
+
+VHS-1,<BR>
+
+
+
+ln signal is the ln of the signal measured by the TERC VHS-1,<BR>
+
+
+
+0.117 is the AOT caused by Rayleigh scattering in the atmosphere
+
+at 525 nm, <BR>
+
+
+
+m is the air mass, and<BR>
+
+
+
+p is the atmospheric pressure for your location in millibars. <BR>
+
+
+
+
+
+<P>
+
+     If your barometer indicates inches of mercury instead of
+
+millibars, change (p/1013.25) to (p/29.92). If you don't have a
+
+barometer, you can use the U.S. Standard Atmosphere to estimate
+
+the mean p for your location's elevation above sea level (you can
+
+round the value for pressure to the nearest integer value without
+
+affecting your AOT results):
+
+</P>
+
+
+
+<PRE>     <B>Elevation (meters)</B>       <B>Pressure (millibars)</B>
+
+
+
+          0                        1013.25
+
+          500                       954.61   
+
+          1000                      898.76
+
+          1500                      845.59
+
+          2000                      795.01
+
+          2500                      746.91   
+
+          3000                      701.21   
+
+          3500                      657.80   
+
+          4000                      616.60   
+
+          4500                      577.52
+
+          5000                      540.48</PRE>
+
+
+
+<P>
+
+(From "U.S. Standard Atmosphere, 1976" (National Oceanic and
+
+Atmospheric Administration, National Aeronautics and Space
+
+Administration and the U.S. Air Force, 1976) as published in
+
+"Handbook of Chemistry and Physics," CRC Press, Inc., p. F144,
+
+1987.)
+
+</P>
+
+
+
+<P>
+
+     Notice that the AOT formula subtracts the effect on optical
+
+depth caused by Rayleigh scattering from molecules of air. This
+
+is why the formula can provide the optical depth caused only by
+
+aerosols and particles (tiny water droplets, smoke, pollen, dust,
+
+salt, sulfates, etc.).  
+
+</P>
+
+<P>
+
+     Incidentally, if you are interested in math, you might
+
+wonder why the terms of the AOT formula are divided by the air
+
+mass. This permits measurements made at different times or by
+
+instruments in different locations to be compared by adjusting
+
+all measurements by all instruments for the air mass directly
+
+overhead (m = 1). This method works very well if the air is
+
+stable between the instrument and the Sun. But if the path of
+
+sunlight moves over a polluted or hazy region, the AOT you
+
+measure will not accurately reflect the air mass directly over
+
+your head.
+
+</P></MENU></TD></TR></TABLE>
+
+
+
+
+
+<TABLE BORDER="0" CELLPADDING="3" CELLSPACING="3" WIDTH="500">
+
+<TR>
+
+	<TD VALIGN=TOP COLSPAN=2 ALIGN=LEFT NOWRAP>
+
+<MENU>
+
+<FONT SIZE="2">[ <B>TERC VHS-1 Sun Photometer </B> ]</FONT><FONT SIZE="2"> [ <A HREF="101.html#manual">Manual TOC</A> ]</FONT><P>
+
+<A HREF="about.html"><IMG SRC="images/banaboutplain.gif" ALT="[About]" 
+WIDTH="46" HEIGHT="28" BORDER="0"></A><A HREF="news.html"><IMG 
+SRC="images/bannewsplain.gif" ALT="[News&Numbers]" WIDTH="106" HEIGHT="28" 
+BORDER="0"></A><A HREF="101.html"><IMG SRC="images/ban101.gif" ALT="[Haze 
+101]" WIDTH="57" HEIGHT="28" BORDER="0"></A><!--<A HREF="chat.html"><IMG 
+SRC="images/banchatplain.gif" ALT="[Haze Chat]" WIDTH="67" HEIGHT="28" BORDER="0"></A>--><A HREF="data.html"><IMG SRC="images/bandataplain.gif" ALT="[Data Collection]" WIDTH="110" HEIGHT="28" BORDER="0"></A><A HREF="corner.html"><IMG SRC="images/bancornerplain.gif" ALT="[Forrest's Corner]" WIDTH="114" HEIGHT="28" BORDER="0"></A></TD></TR>
+
+<TR>
+
+	<TD WIDTH=85><MENU><IMG SRC="images/sunsmall.gif" ALT="sun small" WIDTH="85" HEIGHT="47" BORDER="0"></MENU></TD>
+
+
+
+	<TD WIDTH=415 NOWRAP><MENU><FONT SIZE="2"><B>Haze-SPAN</B>, A project of the <A HREF="../index.html"><B>Concord Consortium</B></A><BR>
+
+Copyright &COPY; 1997. All rights reserved.<BR> 
+
+Last updated: 21-Apr 1997: http://www.concord.org/haze/formula.html<BR>
+
+Questions about Haze-SPAN: <A HREF="mailto:carolyn@concord.org">carolyn@concord.org</A> | about this site: <A HREF="mailto:webmaster@concord.org">webmaster@concord.org</A></FONT></MENU></TD>
+
+</TR>
+
+</TABLE>
+
+
+
+</BODY>
+
+</HTML>
+
